@@ -3,13 +3,21 @@ import { View, Text } from 'react-native';
 import { Input, Button } from 'react-native-elements';
 
 class SignUpForm extends Component {
+  state = { phone: '' };
+
+  handleSubmit = () => {};
+
   render() {
     return (
       <View>
         <View style={{ marginBottom: 10 }}>
-          <Input label='Enter Phone Number' />
+          <Input
+            label='Enter Phone Number'
+            value={this.state.phone}
+            onChangeText={phone => this.setState({ phone })}
+          />
         </View>
-        <Button title='Sumbit' />
+        <Button onPress={this.handleSubmit} title='Sumbit' />
       </View>
     );
   }

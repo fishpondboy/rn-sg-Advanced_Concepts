@@ -95,9 +95,9 @@ class Deck extends Component {
         }
 
         return (
-          <View key={item.id} style={styles.cardStyle}>
-            {this.props.renderCard(item)}
-          </View>
+          <Animated.View key={item.id} style={styles.cardStyle}>
+            {(this.props.renderCard(item), console.log(this.state.index))}
+          </Animated.View>
         );
       })
       .reverse();

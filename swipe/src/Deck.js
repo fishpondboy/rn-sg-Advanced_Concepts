@@ -42,6 +42,12 @@ class Deck extends Component {
     this.state = { panResponder, position, index: 0 };
   }
 
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    if (nextProps.data !== this.props.data) {
+      this.setState({ index: 0 });
+    }
+  }
+
   UNSAFE_componentWillUpdate() {
     UIManager.setLayoutAnimationEnabledExperimental &&
       UIManager.setLayoutAnimationEnabledExperimental(true);

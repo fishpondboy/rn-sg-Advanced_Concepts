@@ -33,7 +33,7 @@ class SignInForm extends Component {
 
         <View style={{ marginBottom: 10 }}>
           <Input
-            label='Enter Phone Number'
+            label='Enter Code'
             value={this.state.code}
             onChangeText={code => this.setState({ code })}
           />
